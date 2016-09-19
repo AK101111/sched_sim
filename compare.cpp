@@ -1,6 +1,6 @@
 #include "fcfs.h"
 #include "rr.h"
-
+#include "sjf.h"
 int main()
 {
   printf("Schedule FCFS\n");
@@ -12,5 +12,7 @@ int main()
   printstat(statFCFS);
   stats statRR = startRR(Rand);
   printstat(statRR);
-  return 0;
+  stats statSJF = startSJF(Rand);
+	printstat(statSJF);
+	return 0;
 }
