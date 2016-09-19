@@ -10,10 +10,14 @@ void genRandom(std::vector<process> &Rand, int size)
   std::uniform_int_distribution<int> randomNode(1,MAX_MAX-1);
     short seedr = clock()%MAX_MAX;
     std::default_random_engine generator{seedr};
-    
+    std::set<int> S;
     
   for(int i=0; i<size; ++i){
     int pid = randomNode(generator);
+      while(S.find(pid) != S.end()){
+         pid = randomNode(generator);
+      }
+      S.insert(pid);
     int burst_time = randomNode(generator)%BURST_TIME;
     if(burst_time)
       burst_time++;

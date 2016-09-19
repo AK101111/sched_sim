@@ -10,6 +10,7 @@
 #include <functional>
 #include <time.h>
 #include <string.h>
+#include <set>
 
 #define RUNNING 1
 #define WAITING 0
