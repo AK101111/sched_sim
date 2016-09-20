@@ -3,11 +3,11 @@ struct burst_comp
 {
     bool operator()(const process &a, const process &b) const
     {
-        return (a.burst_time < b.burst_time);
+        return (a.priority < b.priority);
     }
 };
 
-stats startSJF(std::vector<process> &randData){
+stats startPRIORITY(std::vector<process> &randData){
     stats stat;
     int curr_time = 0;
     int on_time = 0;

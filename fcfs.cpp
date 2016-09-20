@@ -22,7 +22,7 @@ stats startFCFS(std::vector<process> &randData)
       curr_time = scheduling_process.arrival_time;
     }else{
       // Job ongoing, some waiting
-      waiting_time += (Q.size())*(curr_time - scheduling_process.arrival_time);
+      waiting_time += (curr_time - scheduling_process.arrival_time);
     }
 
     // Scheduling

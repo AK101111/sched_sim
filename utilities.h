@@ -1,6 +1,7 @@
 #ifndef UTILITIES_
 #define UTILITIES_
 
+#include <iostream>
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
