@@ -19,7 +19,7 @@ void genRandom(std::vector<process> &Rand, int size)
       }
       S.insert(pid);
     int burst_time = randomNode(generator)%BURST_TIME;
-    if(burst_time)
+    if(!burst_time)
       burst_time++;
     int arrival_time = randomNode(generator)%(MAX_MAX-1);
     int priority = randomNode(generator)%PRIORITY;
