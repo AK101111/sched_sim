@@ -13,23 +13,14 @@ stats startRR(std::vector<process> &randData){
     
     std::vector<process> RR;
     while(numProcess){
-        process top;
-        if(curr < randData.size()){
-            top = randData[curr];
-        }
-        bool found = true;
-        while(found){
-            if((top.arrival_time == curr_time) && !(curr == randData.size())){
-                RR.push_back(top);
-                // std::cout << "pushed " << curr_time << std::endl;
-                curr++;
-            }
+        while((curr < randData.size()) && (randData[curr].arrival_time <= curr_time)){
+            RR.push_back(randData[curr]);
+            curr++;
         }
         if(!RR.empty()){
             RR[rr_curr].burst_time -= QUANTUM;
             on_time += QUANTUM;
             if(RR[rr_curr].burst_time <= 0){
-                // std::cout << "done " << curr_time << std::endl;
                 RR.erase(RR.begin() + rr_curr);
                 numProcess--;
                 if(RR.size() == 0){
