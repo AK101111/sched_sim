@@ -12,8 +12,8 @@ int main()
   parse(infile,Rand);
   stats statFCFS = startFCFS(Rand);
   printstat(statFCFS);
-  stats statRR = startRR(Rand);
-  printstat(statRR);
+  //stats statRR = startRR(Rand);
+  //printstat(statRR);
   stats statSJF = startSJF(Rand);
 	printstat(statSJF);
   stats mlq = sch_multilevel_que(Rand);
