@@ -63,7 +63,7 @@ stats sch_multilevel_que(std::vector<process> &input){
       }      
 
       foreground.front().burst_time -= 1;
-      waiting_time += foreground.size() - 1;
+      waiting_time += (foreground.size() - 1);
             
       if (foreground.front().burst_time == 0){        
         foreground.erase(foreground.begin());
@@ -73,7 +73,7 @@ stats sch_multilevel_que(std::vector<process> &input){
     if (flapsed == false && background.size() != 0){
       blapsed = true;
       background.front().burst_time -= 1;
-      waiting_time += background.size() - 1;
+      waiting_time += (background.size() - 1);
       
       if (background.front().burst_time == 0)
         background.erase(background.begin());

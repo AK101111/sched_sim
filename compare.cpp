@@ -2,7 +2,8 @@
 #include "rr.h"
 #include "sjf.h"
 #include "priority.h"
-#include "multilevel_que.cpp"
+#include "multilevel_que.h"
+#include "multilevel_feedback.h"
 
 int main()
 {
@@ -13,11 +14,15 @@ int main()
   parse(infile,Rand);
   stats statFCFS = startFCFS(Rand);
   printstat(statFCFS);
-  // stats statRR = startRR(Rand);
-  // printstat(statRR);
-  stats statSJF = startSJF(Rand);
-	printstat(statSJF);
-  // stats mlq = sch_multilevel_que(Rand);
-  // printstat(mlq);
+ //  stats statRR = startRR(Rand);
+ //  printstat(statRR);
+ //  stats statSJF = startSJF(Rand);
+	// printstat(statSJF);
+ //  stats statsPRIORITY = startPRIORITY(Rand);
+ //  printstat(statsPRIORITY);
+ //  stats mlq = sch_multilevel_que(Rand);
+ //  printstat(mlq);
+ //  stats mlq_feedback = sch_multilevel_feedback(Rand);
+ //  printstat(mlq_feedback);
 	return 0;
 }
