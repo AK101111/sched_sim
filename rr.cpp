@@ -1,6 +1,5 @@
 #include "rr.h"
 
-
 stats startRR(std::vector<process> &randData){
     stats stat;
     int QUANTUM = 1;

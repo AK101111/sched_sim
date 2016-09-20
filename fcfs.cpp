@@ -9,9 +9,9 @@ stats startFCFS(std::vector<process> &randData)
   int on_time = 0;
   int waiting_time = 0;
   int numProcess = randData.size();
-    std::queue<process> Q;
-    for(std::vector<process>::iterator it = randData.begin(); it != randData.end(); ++it)
-        Q.push(*it);
+  std::queue<process> Q;
+  for(std::vector<process>::iterator it = randData.begin(); it != randData.end(); ++it)
+      Q.push(*it);
 	while(!Q.empty()){
 		// FCFS
     process scheduling_process = Q.front();
