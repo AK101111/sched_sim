@@ -1,6 +1,5 @@
 #include "rr.h"
 
-
 stats startRR(std::vector<process> &randData){
     stats stat;
     int QUANTUM = 1;
@@ -11,7 +10,7 @@ stats startRR(std::vector<process> &randData){
     int numProcess = randData.size();
     int curr=0;
     int rr_curr = 0;
-    std::set<int>S;
+    
     std::vector<process> RR;
     while(numProcess){
         process top;
